@@ -22,7 +22,7 @@ describe('store.js', () => {
       expect(commit.firstCall.args[0]).to.equal('setYieldCount');
       expect(commit.firstCall.args[1]).to.deep.equal({ yieldCount: 5 });
     });
-    it('tests `getYieldCount` functionally by calling dispatch and testing results directly on the store', async () => {
+    it('tests `getYieldCount` by calling dispatch and testing results directly on the store', async () => {
       await Store.dispatch('getYieldCount');
       expect(Store.state.yields.yieldCount).to.equal(5);
     });
